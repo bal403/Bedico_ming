@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aesthetic Black Page</title>
+<style>
+  /* Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Pacifico&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 300%;
+    background: linear-gradient(45deg, #ff6ec4, #7873f5, #00f2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+    margin: 0.5rem 0;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+  }
+
+  button {
+    background: #111;
+    border: 2px solid #ff6ec4;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 25px;
+    color: #ff6ec4;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background: #ff6ec4;
+    color: #000;
+    transform: scale(1.1);
+  }
+
+  @keyframes glow {
+    0% { text-shadow: 0 0 10px #ff6ec4, 0 0 20px #7873f5; }
+    50% { text-shadow: 0 0 20px #ff6ec4, 0 0 30px #00f2ff; }
+    100% { text-shadow: 0 0 10px #ff6ec4, 0 0 20px #7873f5; }
+  }
+</style>
+</head>
+<body>
+  <h1>✨ My name is Ming✨</h1>
+  <br>
+  <p>Nag kaon kana ba love?</p>
+
+<script>
+  const colors = ['#ff6ec4', '#7873f5', '#00f2ff', '#ff9a9e', '#f6d365'];
+  
+  function changeColors() {
+    const random = colors[Math.floor(Math.random() * colors.length)];
+    document.querySelector('h1').style.background = random;
+    document.querySelector('h1').style.webkitBackgroundClip = 'text';
+    document.querySelector('h1').style.webkitTextFillColor = 'transparent';
+  }
+</script>
+</body>
+</html>
